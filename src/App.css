@@ -1,38 +1,203 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body{
+  font-family: 'Hanken Grotesk';
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Container {
+  margin: 80px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.List {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  column-gap: .8rem;
+  row-gap: .5rem;
+  padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.List__item {
+  min-height: 45px;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  text-align: center;
   color: white;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 2px 4px -1px #0000000F, 0px 4px 6px -1px #0000001A;
+  border-radius: 6px;
+  text-transform: capitalize;
+  list-style: none;
+  cursor: pointer;
+}
+.List__item:hover {
+  background: white;
+  color: black;
+  text-shadow: none;
+  transition: 300ms;
 }
 
-.App-link {
-  color: #61dafb;
+.List__item-selected {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 3px solid white;
+  outline: 2px solid black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Selected__item__container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.Selected__item {
+  margin-top: 6px;
+  margin-right: 6px;
+  padding: 5px 10px 5px 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 6px;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+hr{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-style: solid;
+  border-width: 1px;
+  border-top: none;
+  border-color: black;
+}
+
+/* Taken from https://clrs.cc/ */
+
+.List__item--navy {
+  background-color: #001f3f;
+}
+
+.Selected__item--navy {
+  border-color: #001f3f;
+}
+
+.List__item--blue {
+  background-color: #0074d9;
+}
+
+.Selected__item--blue {
+  border-color: #0074d9;
+}
+
+.List__item--aqua {
+  background-color: #7fdbff;
+}
+
+.Selected__item--aqua {
+  border-color: #7fdbff;
+}
+
+.List__item--teal {
+  background-color: #39cccc;
+}
+
+.Selected__item--teal {
+  border-color: #39cccc;
+}
+
+.List__item--olive {
+  background-color: #3d9970;
+}
+
+.Selected__item--olive {
+  border-color: #3d9970;
+}
+
+.List__item--green {
+  background-color: #2ecc40;
+}
+
+.Selected__item--green {
+  border-color: #2ecc40;
+}
+
+.List__item--lime {
+  background-color: #01ff70;
+}
+
+.Selected__item--lime {
+  border-color: #01ff70;
+}
+
+.List__item--yellow {
+  background-color: #ffdc00;
+}
+
+.Selected__item--yellow {
+  border-color: #ffdc00;
+}
+
+.List__item--orange {
+  background-color: #ff851b;
+}
+
+.Selected__item--orange {
+  border-color: #ff851b;
+}
+
+.List__item--red {
+  background-color: #ff4136;
+}
+
+.Selected__item--red {
+  border-color: #ff4136;
+}
+
+.List__item--maroon {
+  background-color: #85144b;
+}
+
+.Selected__item--maroon {
+  border-color: #85144b;
+}
+
+.List__item--fuchsia {
+  background-color: #f012be;
+}
+
+.Selected__item--fuchsia {
+  border-color: #f012be;
+}
+
+.List__item--purple {
+  background-color: #b10dc9;
+}
+
+.Selected__item--purple {
+  border-color: #b10dc9;
+}
+
+.List__item--black {
+  background-color: #111111;
+}
+
+.Selected__item--black {
+  border-color: #111111;
+}
+
+.List__item--gray {
+  background-color: #aaaaaa;
+}
+
+.Selected__item--gray {
+  border-color: #aaaaaa;
+}
+
+.List__item--silver {
+  background-color: #dddddd;
+}
+
+.Selected__item--silver {
+  border-color: #dddddd;
 }
